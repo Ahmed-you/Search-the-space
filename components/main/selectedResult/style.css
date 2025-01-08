@@ -1,0 +1,102 @@
+.selectedResult-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 20px 20px;
+  width: 95%;
+}
+.selectedResult {
+  width: 608px;
+  background: rgba(250, 194, 238, 0.15);
+  backdrop-filter: blur(10px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+  position: relative;
+}
+/* Rectangle 19 */
+.textContainer {
+  position: absolute; /* Positioned absolutely within .selectedResult */
+  left: 20px; /* Add spacing from the left */
+  right: 20px; /* Add spacing from the right */
+  bottom: 20px; /* Add spacing from the bottom */
+  display: flex; /* Keep your flex settings */
+  gap: 20px;
+  flex-direction: column;
+  padding: 10px;
+  height: fit-content;
+}
+.mask-group {
+  position: relative;
+  height: 408px;
+  min-width: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+/* Image styling with transparency */
+.selectedResult-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales correctly */
+
+  /* Apply mask to make the image fade to transparency */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 75%,
+    /* Fully visible at 75% height */ rgba(0, 0, 0, 0) 100%
+      /* Fully transparent at the bottom */
+  );
+  -webkit-mask-size: cover;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-size: cover;
+
+  /* For older browsers without mask support */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-clip: text;
+}
+
+/* Title styling */
+.selectedResult-title {
+  z-index: 2;
+  color: #e3edff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Improves readability */
+}
+
+/* Description styling */
+.selectedResult-description {
+  z-index: 2;
+  color: #e3edff;
+  font-size: 14px;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 768px) {
+  .mask-group {
+    height: 500px;
+  }
+  .selectedResult {
+    width: 900px;
+  }
+}

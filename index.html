@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      
+      <div class="titles-container">
+      <div class="website-title-effect"> Search The Space</div>
+      <div class="website-title"> Search The Space</div>
+    </div>
+      <div class="search-container">
+        <form class="search-form" action="">
+          <div class="search-stuff">
+            <img class="search-icon" src="./imgs/searchIcon.svg" alt="" />
+            <input class="search"  type="text" name="" id="search" />
+            <input
+              class="submit-search"
+              type="submit"
+              value="Search"
+              name=""
+              id=""
+            />
+          </div>
+        </form>
+      </div>
+      <div class="selectedResult-container">
+        <div class="selectedResult">
+          <div class="mask-group"></div>
+          <div class="textContainer">
+            <div class="selectedResult-title">
+              What Feeds the Beast in a Galaxy Cluster?
+            </div>
+            <div class="selectedResult-description">
+              Description is here. Description is here. Description is here.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-container"></div>
+      <!-- loadingAnimation HTML -->
+     
+      <div class="game-loader ">
+        <div class="game-loader__planet">
+          <div class="loader-radius1"></div>
+          <div class="loader-radius2"></div>
+          <div class="loader-radius3"></div>
+          <div class="loader-radius4"></div>
+          <div class="loader-mini1"></div>
+          <div class="loader-mini2"></div>
+          <div class="loader-mini3"></div>
+          <div class="loader-mini4"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="goo">
+                <fegaussianblur in="SourceGraphic" stddeviation="15" result="blur"></fegaussianblur>
+                <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 26 -7" result="goo"></fecolormatrix>
+                <feblend in="SourceGraphic" in2="goo"></feblend>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <script src="helpers/utils/domSelector.js"></script>
+
+         <script type="module" src="main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "search-the-space",
+  "version": "1.0.0",
+  "description": "this is gana be a part of week 3 in GSG c10  project about working with APIs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmed-you/Search-the-space.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahmed-you/Search-the-space/issues"
+  },
+  "homepage": "https://github.com/Ahmed-you/Search-the-space#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
